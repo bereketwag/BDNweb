@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Packages</title>
+    <link rel="stylesheet" href="css/custcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div id="navbar"></div>
+        <div class="header-content">
+            <h1>Customize Your Package</h1>
+            <p>Select the options that best suit your needs.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="customize-section">
+            <h2>Branding</h2>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="branding" value="logo-design"> Logo Design</label>
+                <label><input type="checkbox" name="branding" value="package-design"> Package Design</label>
+                <label><input type="checkbox" name="branding" value="business-card"> Business Card Design</label>
+                <label><input type="checkbox" name="branding" value="other"> Other Branding Materials</label>
+            </div>
+        </section>
+
+        <section class="customize-section">
+            <h2>Website Development</h2>
+            <div class="radio-group">
+                <label><input type="radio" name="website" value="personal"> Personal Website</label>
+                <label><input type="radio" name="website" value="business"> Business Website</label>
+                <label><input type="radio" name="website" value="professional"> Professional Website</label>
+                <label><input type="radio" name="website" value="ecommerce"> E-Commerce Website</label>
+            </div>
+        </section>
+        
+
+        <section class="customize-section">
+            <h2>Digital Marketing</h2>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="marketing" value="seo"> SEO</label>
+                <label><input type="checkbox" name="marketing" value="ppc"> PPC</label>
+                <label><input type="checkbox" name="marketing" value="social-media"> Social Media Marketing</label>
+                <label><input type="checkbox" name="marketing" value="email"> Email Marketing</label>
+                <label><input type="checkbox" name="marketing" value="content"> Content Marketing</label>
+            </div>
+        </section>
+    </main>
+
+    <div>
+        <div class="done">
+              <div id="selected-counter" class="counter">Selected Features: 0</div>
+        
+              <button type="submit" class="done-button">Done</button>
+            
+        </div>
+    </div>
+
+
+
+
+    
+  
+<!-- Footer Section -->
+<footer class="footer bg-dark text-light py-4">
+    <div class="container text-center">
+      <!-- Logo in Grayscale -->
+      <div class="footer-logo mb-4">
+        <img  
+        src="image/bdn-04.png" alt="Company Logo">
+      </div>
+      <!-- Follow Us Section -->
+      <div class="follow-us mb-4">
+        <h5 class="mb-3">Follow Us</h5>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Footer Content -->
+      <div class="footer-content">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>Contact Us</h5>
+            <p>Addis Ababa, Ethiopia</p>
+            <p>Email: info@BDN.com</p>
+            <p>Phone: +251917893321</p>
+            <p>Phone: +251943340641</p>
+            <p>Phone: +251986599030</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Home</a></li>
+              <li><a href="index.html#services" class="text-light">Services</a></li>
+              <li><a href="index.html#about" class="text-light">About Us</a></li>
+              <li><a href="index.html#contact" class="text-light">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Subscribe</h5>
+            <form action="#" method="post">
+              <input type="email" class="form-control mb-2" placeholder="Your email">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Additional Footer Content -->
+      <div class="text-center mt-4">
+        <p>&copy; 2024 Powered by BDN. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome for icons -->
+      <script src="js/scripts.js"></script> <!-- Custom JS -->
+  
+      
+  </body>
+  <script>
+    AOS.init();
+  </script>
+  </html>
+  
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // JavaScript to update selected checkboxes count
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const counter = document.getElementById('selected-counter');
+
+            const updateCounter = () => {
+                const selectedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+                counter.textContent = `Selected: ${selectedCount}`;
+            };
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateCounter);
+            });
+
+            // Initialize the counter on page load
+            updateCounter();
+        });
+    </script>
+
+</body>
+</html>

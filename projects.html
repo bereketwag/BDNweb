@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects Gallery</title>
+    <link rel="stylesheet" href="css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+</br></br></br></br>
+    <header>
+      <h1>Projects Gallery</h1>
+    </header>
+
+    <main class="gallery">
+      <!-- Project Card 1 -->
+      <div
+        class="card"
+        data-title="Project Title 1"
+        data-date="2024-01-01"
+        data-description="Description of Project 1"
+        data-images='["image/1.jpeg", "image/3.jpeg", "image/1.jpeg"]'
+      >
+        <img src="image/1.jpeg" alt="Project 1" />
+        <h3>Project Title 1</h3>
+        <p>Date: 2024-01-01</p>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div
+        class="card"
+        data-title="Project Title 2"
+        data-date="2024-02-01"
+        data-description="Description of Project 2"
+        data-images='["image/2.jpeg", "image/4.jpeg", "image/5.jpeg"]'
+      >
+        <img src="image/2.jpeg" alt="Project 2" />
+        <h3>Project Title 2</h3>
+        <p>Date: 2024-02-01</p>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </main>
+
+    <!-- Modal Structure -->
+    <div class="modal" id="projectModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <!-- Carousel Container -->
+        <div class="carousel-container">
+          <img src="" alt="Project Image" class="modal-image" />
+        </div>
+
+        <h2 class="modal-title"></h2>
+        <p class="modal-description"></p>
+        <p class="modal-date"></p>
+
+        <!-- Navigation Buttons for Carousel -->
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+        <div class="share-options">
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=#"
+            target="_blank"
+            class="share-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://twitter.com/intent/tweet?url=#"
+            target="_blank"
+            class="share-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/shareArticle?mini=true&url=#"
+            target="_blank"
+            class="share-icon"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+        <!-- Like and Share Buttons -->
+        <div class="modal-buttons">
+          <button class="like-button">
+            <i class="fas fa-thumbs-up"></i> Like
+            <span class="like-counter">0</span>
+          </button>
+          <button class="share-button">
+            <i class="fas fa-share"></i> Share
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="projects.js"></script>
+  </body>
+</html>

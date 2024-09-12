@@ -1,0 +1,30 @@
+/* Make share options initially hidden */
+.share-options {
+    display: none; /* Initially hidden */
+    position: absolute;
+    bottom: -50px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1001;
+    text-align: center;
+}
+
+.share-options.active {
+    display: block; /* Display when active */
+}
+
+.share-options .share-icon {
+    margin: 0 5px;
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.share-options .share-icon:hover {
+    color: #f7941d; /* Accent color */
+}
