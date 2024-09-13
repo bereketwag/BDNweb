@@ -176,3 +176,67 @@ header {
 .next {
     right: 10px;
 }
+
+
+
+/* Recent Web Dev Section */
+.recent-web-dev-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+}
+
+.recent-web-dev-section .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.web-dev-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.web-dev-card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-visit {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f7941d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-visit:hover {
+    background-color: #e5891c;
+}
+
+.btn-visit i {
+    margin-right: 8px;
+}
