@@ -178,10 +178,10 @@ header {
 }
 
 
-
+/* Recent Web Dev Section */
 /* Recent Web Dev Section */
 .recent-web-dev-section {
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     padding: 60px 0;
 }
 
@@ -189,30 +189,38 @@ header {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 40px;
+    font-weight: 700;
 }
 
 .web-dev-card {
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .web-dev-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .card-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 15px 0;
+    font-weight: 600;
 }
 
 .card-description {
@@ -230,13 +238,15 @@ header {
     border-radius: 5px;
     text-decoration: none;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-visit:hover {
     background-color: #e5891c;
+    transform: translateY(-2px);
 }
 
 .btn-visit i {
     margin-right: 8px;
+    font-size: 1.1rem;
 }
