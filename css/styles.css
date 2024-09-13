@@ -239,9 +239,8 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(45deg, #3e3e3e, #004080); /* Dark gray to dark blue gradient */
-  background-size: cover;
-  background-position: center;
+  position: relative; /* Ensure child elements can be positioned relative to this */
+  background: url('../image/BG.png') no-repeat center center/cover; /* Background image */
   height: 100vh; /* Full viewport height */
   color: white;
   text-align: center;
@@ -250,41 +249,26 @@ body {
   align-items: center;
   padding: 0;
 }
-/* Testing type effectt */
-.console-container {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.console-underscore {
-  display: inline-block;
-  position: relative;
-  color: white;
-}
-
-.container {
-  position: relative;
-  text-align: center;
-}
-
-.hero-section .lottie-background {
+/* Black overlay */
+.hero-section .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Ensure it is behind the text and buttons */
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 0; /* Ensure overlay is behind the content */
 }
 
+/* Container */
 .hero-section .container {
   position: relative;
-  z-index: 1; /* Ensure content is above the Lottie animation */
+  z-index: 1; /* Ensure content is above the overlay */
+  text-align: center;
 }
 
+/* Display settings */
 .hero-section .display-4 {
   font-size: 3rem; /* Adjust font size */
   font-weight: bold;
@@ -295,6 +279,7 @@ body {
   margin-bottom: 30px;
 }
 
+/* Buttons */
 .hero-buttons .btn {
   font-size: 1rem;
   padding: 10px 20px;
@@ -310,6 +295,22 @@ body {
   background-color: #6476de;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transform: translateY(4px);
+}
+
+/* Console effect settings */
+.console-container {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.console-underscore {
+  display: inline-block;
+  position: relative;
+  color: white;
 }
 
 
