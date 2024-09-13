@@ -346,6 +346,29 @@ body {
   height: auto;
   border-radius: 5px;
 }
+.portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.portfolio-btn i {
+  margin-right: 8px;
+  transition: transform 0.3s;
+}
+
+/* Hover effect */
+.portfolio-btn:hover {
+  background-color: #f7941d; /* Change to your preferred color */
+  transform: scale(1.05);
+}
+
+.portfolio-btn:hover i {
+  transform: rotate(360deg); /* Rotate the icon on hover */
+}
+
+
+
 
 /* intro video */
 .intro-video-section {
