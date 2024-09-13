@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Vacancies</title>
+    <link rel="stylesheet" href="css/vacacss.css">
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+
+    <header>
+        <h1>Current Vacancies</h1>
+        <p>Join our team and build an amazing career with us!</p>
+        <div class="search-container">
+            <input type="text" placeholder="Search for vacancies...">
+            <button class="search-btn">Search</button>
+        </div>
+    </header>
+
+    <main class="vacancy-list">
+        <!-- No Vacancies Image Area -->
+        <div class="no-vacancy">
+            <img src="image/vacancy.png" alt="No Vacancies" class="no-vacancy-image">
+            <p>No vacancies posted yet. Check back later!</p>
+        </div>
+    </main>
+
+</body>
+</html>
